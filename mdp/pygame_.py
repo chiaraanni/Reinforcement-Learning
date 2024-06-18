@@ -64,7 +64,6 @@ class Car:
 
 def draw(trajectory):
     pygame.init()
-    GRASS = scale_image(pygame.image.load("C:/Users/Lenovo/OneDrive - Università degli Studi di Milano/MAGISTRALE/REINFORCEMENT LEARNING/Project/mdp/img/grass.jpg"), 2.0)
     TRACK = scale_image(pygame.image.load("C:/Users/Lenovo/OneDrive - Università degli Studi di Milano/MAGISTRALE/REINFORCEMENT LEARNING/Project/mdp/img/track.jpg"), 1)
     FINISH = scale_image(pygame.image.load("C:/Users/Lenovo/OneDrive - Università degli Studi di Milano/MAGISTRALE/REINFORCEMENT LEARNING/Project/mdp/img/finish.png"), 0.74)
     FPS = 10  # make sure the program is not running faster than 10 frame per second
@@ -73,7 +72,7 @@ def draw(trajectory):
 
     pygame.display.set_caption("Racing game")
     clock = pygame.time.Clock()
-    background = [(GRASS, (0, 0)), (TRACK, (0, 0)), (FINISH, (0, 81))]
+    background = [(TRACK, (0, 0)), (FINISH, (0, 81))]
 
     player_car = Car(trajectory)
     run = True
